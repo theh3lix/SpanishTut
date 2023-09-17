@@ -1,0 +1,16 @@
+<table class="table table-sm table-bordered tab" style="background-color: transparent !important;">
+    <tbody style="background-color: transparent !important;">
+        <tr class="top-row">
+            <td class="left-cell top-cell"><ng-content select="[top-left]"></ng-content></td>
+            <td class="right-cell top-cell"><ng-content select="[top-right]"></ng-content></td>
+        </tr>
+        <tr>
+            <td class="left-cell"><ng-content select="[middle-left]"></ng-content></td>
+            <td class="right-cell"><ng-content select="[middle-right]"></ng-content></td>
+        </tr>
+        <tr class="bottom-row">
+            <td class="left-cell bottom-cell"><ng-content select="[bottom-left]"></ng-content></td>
+            <td class="right-cell bottom-cell"><ng-content select="[bottom-right]"></ng-content></td>
+        </tr>
+    </tbody>
+</table>

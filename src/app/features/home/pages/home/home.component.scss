@@ -1,0 +1,22 @@
+.home-view {
+    margin-top: 50px;
+}
+
+.left {
+    max-width: 40%;
+    float: left;
+
+    .deadpool {
+        max-width: 80%;
+        height: auto;
+    }
+
+}
+
+.right {
+    float: right;
+    font-size: 1.1rem;
+    text-align: right;
+    line-height: 2;
+    padding-top: 10%;
+}

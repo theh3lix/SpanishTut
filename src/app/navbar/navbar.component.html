@@ -1,0 +1,10 @@
+
+<div class="sidebar">
+    <div class="logo-element">
+        <a [routerLink]="['/']"><img src="../../assets/logomby.png" class="logo" ></a>
+    </div>
+    
+    <div class="sidebar-entry" *ngFor="let element of navbarElements">
+      <mat-icon>{{element.icon}}</mat-icon> {{element.label}}
+    </div>
+</div>

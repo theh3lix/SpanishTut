@@ -1,0 +1,31 @@
+  .sidebar-entry {
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      transition: box-shadow 0.3s;
+  }
+
+  .sidebar-entry:hover {
+      background-color: #555;
+      box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+  }
+
+  .sidebar-entry:active {
+      background-color: #555;
+      box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.4);
+  }
+
+  .logo {
+      max-width: 50%;
+  }
+
+  .logo-element {
+      margin-bottom: 50px;
+  }
+
+  mat-icon {
+      vertical-align: bottom;
+  }

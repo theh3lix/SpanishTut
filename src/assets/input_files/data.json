@@ -1,0 +1,200 @@
+{
+	"dictionary": 
+	"verbs": [
+		{
+			"english": "to go",
+			"spanish": "ir",
+			"category": "general",
+			"conjugation": "irregular"
+		},
+		{
+			"english": "to eat",
+			"spanish": "comer",
+			"category": "general",
+			"conjugation": "er"
+		},
+		{
+			"english": "to read",
+			"spanish": "leer",
+			"category": "general",
+			"conjugation": "er"
+		},
+		{
+			"english": "to think, to believe",
+			"spanish": "creer",
+			"category": "general",
+			"conjugation": "er"
+		},
+		{
+			"english": "to run",
+			"spanish": "correr",
+			"category": "general",
+			"conjugation": "er"
+		},
+		{
+			"english": "to learn",
+			"spanish": "aprender",
+			"category": "general",
+			"conjugation": "er"
+		},
+		{
+			"english": "to live",
+			"spanish": "vivir",
+			"category": "general",
+			"conjugation": "ir"
+		},
+		{
+			"english": "to write",
+			"spanish": "escribir",
+			"category": "general",
+			"conjugation": "ir"
+		},
+		{
+			"english": "to open",
+			"spanish": "abrir",
+			"category": "general",
+			"conjugation": "ir"
+		},
+		{
+			"english": "to receive",
+			"spanish": "recibir",
+			"category": "general",
+			"conjugation": "ir"
+		},
+		{
+			"english": "to attend, to assist",
+			"spanish": "asistir",
+			"category": "general",
+			"conjugation": "ir"
+		},
+		{
+			"english": "to speak",
+			"spanish": "hablar",
+			"category": "general",
+			"conjugation": "ar"
+		},
+		{
+			"english": "to pay",
+			"spanish": "pagar",
+			"category": "general",
+			"conjugation": "ar"
+		},
+		{
+			"english": "to listen",
+			"spanish": "escuchar",
+			"category": "general",
+			"conjugation": "ar"
+		},
+		{
+			"english": "to study",
+			"spanish": "estudiar",
+			"category": "general",
+			"conjugation": "ar"
+		},
+		{
+			"english": "to work",
+			"spanish": "trabajar",
+			"category": "general",
+			"conjugation": "ar"
+		},
+		{
+			"english": "to buy",
+			"spanish": "comprar",
+			"category": "general",
+			"conjugation": "ar"
+		}
+	],
+	"nouns": [
+		{
+			"english": "letter",
+			"spanish": "una carta",
+			"category": "other"
+		},
+		{
+			"english": "door",
+			"spanish": "la puerta",
+			"category": "other"
+		},
+		{
+			"english": "cash register",
+			"spanish": "la caja",
+			"category": "shopping"
+		},
+		{
+			"english": "meat store",
+			"spanish": "la carniceria",
+			"category": "places"
+		},
+		{
+			"english": "farmacy",
+			"spanish": "la farmacia",
+			"category": "places"
+		},
+		{
+			"english": "bakery",
+			"spanish": "la panaderia",
+			"category": "places"
+		},
+		{
+			"english": "book store",
+			"spanish": "la libreria",
+			"category": "places"
+		},
+		{
+			"english": "library",
+			"spanish": "la biblioteca",
+			"category": "places"
+		},
+		{
+			"english": "post office",
+			"spanish": "el correo",
+			"category": "places"
+		},
+		{
+			"english": "gallery, shopping centre",
+			"spanish": "la galeria",
+			"category": "places"
+		},
+		{
+			"english": "museum",
+			"spanish": "el museo",
+			"category": "places"
+		},
+		{
+			"english": "restaurant",
+			"spanish": "el restaurante",
+			"category": "places"
+		},
+		{
+			"english": "cafe",
+			"spanish": "el café",
+			"category": "places"
+		},
+		{
+			"english": "cinema",
+			"spanish": "el cine",
+			"category": "places"
+		},
+	],
+	"adjectives": [
+		{
+			"english": "",
+			"spanish": "",
+			"category": ""
+		},
+	],
+	"other": [
+		{
+			"english": "where",
+			"spanish": "donde"
+		},
+		{
+			"english": "to, at",
+			"spanish": "a"
+		},
+		{
+			"english": "in",
+			"spanish": "en"
+		}
+	]
+}
