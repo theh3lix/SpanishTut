@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./vocabulary-settings.component.scss']
 })
 export class VocabularySettingsComponent {
-
+  wordsCount: number = 0;
 }
