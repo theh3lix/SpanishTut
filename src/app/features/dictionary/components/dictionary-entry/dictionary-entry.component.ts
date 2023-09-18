@@ -12,6 +12,7 @@ export class DictionaryEntryComponent implements OnInit {
   duplicateDictionary: {prompt: string, translation: string }[] = [];
   
   @Input() entries: {prompt: string, translation: string }[] = []
+  @Input() category: string = '';
 
   ngOnInit() {
     const json = JSON.stringify(this.entries);

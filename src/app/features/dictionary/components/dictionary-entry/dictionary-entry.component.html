@@ -2,7 +2,7 @@
     <table class="table table-sm table-hover">
         <thead>
             <tr>
-                <th><input type=text class="search-prompt" (keyup)="filter($event)"  [(ngModel)]="searchPrompt" placeholder="Search..."></th>
+                <th><input type=text class="search-prompt" (keyup)="filter($event)"  [(ngModel)]="searchPrompt" placeholder="Search {{category}}..."></th>
                 <th>&nbsp;</th>
             </tr>
             <tr (click)="sort()">
