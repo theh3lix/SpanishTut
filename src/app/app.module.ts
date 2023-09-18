@@ -9,10 +9,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { CardComponent } from './shared/card/card.component';
+import { CardComponent } from './shared/components/card/card.component';
 import { ToBeComponent } from './features/home/components/to-be/to-be.component';
-import { SimpleTabComponent } from './shared/simple-tab/simpletab.component';
+import { SimpleTabComponent } from './shared/components/simple-tab/simpletab.component';
 import { ConjugationComponent } from './features/home/components/conjugation/conjugation.component';
+import { DictionaryComponent } from './features/dictionary/pages/dictionary/dictionary.component';
+import { DictionaryEntryComponent } from './features/dictionary/components/dictionary-entry/dictionary-entry.component';
+import { DataService } from './shared/services/data.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,17 +27,23 @@ import { ConjugationComponent } from './features/home/components/conjugation/con
     CardComponent,
     ToBeComponent,
     SimpleTabComponent,
-    ConjugationComponent
+    ConjugationComponent,
+    DictionaryComponent,
+    DictionaryEntryComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatSidenavModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

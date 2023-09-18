@@ -10,7 +10,7 @@ export class NavbarComponent {
   navbarElements: {label: string, route: string, icon: string}[] = [
     { 
       label: 'Dictionary', 
-      route: '', 
+      route: 'dictionary', 
       icon: 'list'
     },
     {

@@ -1,0 +1,46 @@
+.dictionary {
+    margin: 20px;
+    width: 90%;
+    clear: both;
+    font-size: 11px;
+    max-height: 600px;
+    overflow-y: auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.search-prompt {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+
+.tableFixHead {
+    overflow-y: auto;
+    height: 550px;
+}
+
+.tableFixHead thead th {
+    position: sticky;
+    top: 0px;
+}
+
+td {
+    background: transparent;
+    color: white;
+}
+
+th {
+    background-color: rgba(166, 166, 166, 0.9);
+    color: white;
+}
+
+th:hover {
+    cursor: pointer;
+}
+
+.header {
+    max-height: 50px !important;
+    width: 40%;
+}

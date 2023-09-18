@@ -1,5 +1,4 @@
 {
-	"dictionary": 
 	"verbs": [
 		{
 			"english": "to go",
@@ -174,14 +173,94 @@
 			"english": "cinema",
 			"spanish": "el cine",
 			"category": "places"
-		},
+		}
 	],
 	"adjectives": [
 		{
-			"english": "",
-			"spanish": "",
-			"category": ""
+			"english": "tall",
+			"spanish": "alto",
+			"category": "other"
 		},
+		{
+			"english": "short",
+			"spanish": "bajo",
+			"category": "other"
+		},
+		{
+			"english": "short",
+			"spanish": "chaparro",
+			"category": "other"
+		},
+		{
+			"english": "brunete",
+			"spanish": "moreno",
+			"category": "appearance"
+		},
+		{
+			"english": "blonde",
+			"spanish": "rubio",
+			"category": "appearance"
+		},
+		{
+			"english": "redhead",
+			"spanish": "pelirrojo",
+			"category": "appearance"
+		},
+		{
+			"english": "pretty",
+			"spanish": "bonito",
+			"category": "appearance"
+		},
+		{
+			"english": "pretty",
+			"spanish": "lindo",
+			"category": "appearance"
+		},
+		{
+			"english": "skinny",
+			"spanish": "flaco",
+			"category": "appearance"
+		},
+		{
+			"english": "fat",
+			"spanish": "gordo",
+			"category": "appearance"
+		},
+		{
+			"english": "funny",
+			"spanish": "cómico",
+			"category": "character"
+		},
+		{
+			"english": "funny",
+			"spanish": "gracioso",
+			"category": "character"
+		},
+		{
+			"english": "serious",
+			"spanish": "serio",
+			"category": "character"
+		},
+		{
+			"english": "shy",
+			"spanish": "timido",
+			"category": "character"
+		},
+		{
+			"english": "sincere",
+			"spanish": "sincero",
+			"category": "character"
+		},
+		{
+			"english": "honest",
+			"spanish": "honesto",
+			"category": "character"
+		},
+		{
+			"english": "generous",
+			"spanish": "generoso",
+			"category": "other"
+		}
 	],
 	"other": [
 		{

@@ -1,0 +1,20 @@
+<div class="dictionary tableFixHead">
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th><input type=text class="search-prompt" (keyup)="filter($event)"  [(ngModel)]="searchPrompt" placeholder="Search..."></th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr (click)="sort()">
+                <th>Spanish</th>
+                <th>English</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let noun of dictionary">
+                <td>{{noun.prompt}}</td>
+                <td>{{noun.translation}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

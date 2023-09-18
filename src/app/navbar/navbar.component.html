@@ -4,7 +4,7 @@
         <a [routerLink]="['/']"><img src="../../assets/logomby.png" class="logo" ></a>
     </div>
     
-    <div class="sidebar-entry" *ngFor="let element of navbarElements">
+    <div class="sidebar-entry" *ngFor="let element of navbarElements" [routerLink]="[element.route]">
       <mat-icon>{{element.icon}}</mat-icon> {{element.label}}
     </div>
 </div>

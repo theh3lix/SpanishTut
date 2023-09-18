@@ -1,0 +1,7 @@
+<div class="row">
+    <card class="col-xl-12" *ngIf="dictionaryLoaded">
+        <dictionary-entry [entries]="nouns"></dictionary-entry>
+        <dictionary-entry [entries]="verbs"></dictionary-entry>
+        <dictionary-entry [entries]="adjectives"></dictionary-entry>
+    </card>
+</div>
