@@ -1,0 +1,14 @@
+<table class="table table-sm">
+    <tbody>
+        <tr class="form-check form-switch">
+            <td><input class="form-check-input" [(ngModel)]="allChecked" (change)="checkAll()" type="checkbox"
+                    id="all"></td>
+            <td><label class="form-check-label">All</label></td>
+        </tr>
+        <tr class="form-check form-switch" *ngFor="let option of categories">
+            <td><input class="form-check-input" type="checkbox" [(ngModel)]="option.checked"
+                    id="{{option.category}}"></td>
+            <td><label class="form-check-label">{{option.category}}</label></td>
+        </tr>
+    </tbody>
+</table>
