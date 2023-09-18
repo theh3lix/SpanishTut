@@ -15,7 +15,7 @@ export class NavbarComponent {
     },
     {
       label: 'Vocabulary', 
-      route: '', 
+      route: 'vocabulary', 
       icon: 'language'
     },
     {

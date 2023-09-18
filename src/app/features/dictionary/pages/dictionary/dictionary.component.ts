@@ -42,6 +42,11 @@ export class DictionaryComponent {
           translation: x.english
         }
       });
+      let categories = dictionary.nouns.map(x=>x.category);
+      categories = categories.concat(dictionary.verbs.map(x=>x.category));
+      categories = categories.concat(dictionary.adjectives.map(x=>x.category));
+      categories = categories.map(item => item)
+        .filter((value, index, self) => self.indexOf(value) === index);
       this.dictionaryLoaded = true;
     })
   }

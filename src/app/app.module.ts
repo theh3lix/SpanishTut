@@ -18,6 +18,10 @@ import { DictionaryEntryComponent } from './features/dictionary/components/dicti
 import { DataService } from './shared/services/data.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { VocabularyComponent } from './features/vocabulary/pages/vocabulary/vocabulary.component';
+import { VocabularyCategoriesComponent } from './features/vocabulary/components/vocabulary-categories/vocabulary-categories.component';
+import { VocabularyExercisesComponent } from './features/vocabulary/components/vocabulary-exercises/vocabulary-exercises.component';
+import { VocabularySettingsComponent } from './features/vocabulary/components/vocabulary-settings/vocabulary-settings.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { FormsModule } from '@angular/forms';
     SimpleTabComponent,
     ConjugationComponent,
     DictionaryComponent,
-    DictionaryEntryComponent
+    DictionaryEntryComponent,
+    VocabularyComponent,
+    VocabularyCategoriesComponent,
+    VocabularyExercisesComponent,
+    VocabularySettingsComponent
   ],
   imports: [
     HttpClientModule,
