@@ -1,6 +1,18 @@
 {
 	"verbs": [
 		{
+			"english": "to wear, to use",
+			"spanish": "usar",
+			"category": "clothing",
+			"conjugation": "ar"
+		},
+		{
+			"english": "to carry, to bring, to wear",
+			"spanish": "llevar",
+			"category": "clothing",
+			"conjugation": "ar"
+		},
+		{
 			"english": "to go",
 			"spanish": "ir",
 			"category": "general",
@@ -104,6 +116,91 @@
 		}
 	],
 	"nouns": [
+		{
+			"english": "clothing",
+			"spanish": "la ropa",
+			"category": "clothing"
+		},
+		{
+			"english": "pants",
+			"spanish": "el pantalón",
+			"category": "clothing"
+		},
+		{
+			"english": "shirt",
+			"spanish": "la camisa",
+			"category": "clothing"
+		},
+		{
+			"english": "tie",
+			"spanish": "la corbata",
+			"category": "clothing"
+		},
+		{
+			"english": "bow tie",
+			"spanish": "el lazo",
+			"category": "clothing"
+		},
+		{
+			"english": "t-shirt",
+			"spanish": "la camiseta",
+			"category": "clothing"
+		},
+		{
+			"english": "skirt",
+			"spanish": "la falda",
+			"category": "clothing"
+		},
+		{
+			"english": "blouse",
+			"spanish": "la blusa",
+			"category": "clothing"
+		},
+		{
+			"english": "jacket",
+			"spanish": "la chaqueta",
+			"category": "clothing"
+		},
+		{
+			"english": "coat",
+			"spanish": "el abrigo",
+			"category": "clothing"
+		},
+		{
+			"english": "suit",
+			"spanish": "el traje",
+			"category": "clothing"
+		},
+		{
+			"english": "cap",
+			"spanish": "la gorra",
+			"category": "clothing"
+		},
+		{
+			"english": "socks",
+			"spanish": "los calcetines",
+			"category": "clothing"
+		},
+		{
+			"english": "shoes",
+			"spanish": "los zapatos",
+			"category": "clothing"
+		},
+		{
+			"english": "tennis shoes",
+			"spanish": "los tenis",
+			"category": "clothing"
+		},
+		{
+			"english": "a pair of tennis shoes",
+			"spanish": "un par de tenis",
+			"category": "clothing"
+		},
+		{
+			"english": "belt",
+			"spanish": "el cinturón",
+			"category": "clothing"
+		},
 		{
 			"english": "letter",
 			"spanish": "una carta",
@@ -260,6 +357,46 @@
 			"english": "generous",
 			"spanish": "generoso",
 			"category": "other"
+		},
+		{
+			"english": "green",
+			"spanish": "verde",
+			"category": "colors"
+		},
+		{
+			"english": "black",
+			"spanish": "negro",
+			"category": "colors"
+		},
+		{
+			"english": "red",
+			"spanish": "rojo",
+			"category": "colors"
+		},
+		{
+			"english": "brown",
+			"spanish": "marrón",
+			"category": "colors"
+		},
+		{
+			"english": "yellow",
+			"spanish": "amarillo",
+			"category": "colors"
+		},
+		{
+			"english": "orange",
+			"spanish": "naranja",
+			"category": "colors"
+		},
+		{
+			"english": "blue",
+			"spanish": "azul",
+			"category": "colors"
+		},
+		{
+			"english": "purple",
+			"spanish": "violeto",
+			"category": "colors"
 		}
 	],
 	"other": [
