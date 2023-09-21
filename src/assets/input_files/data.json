@@ -117,6 +117,11 @@
 	],
 	"nouns": [
 		{
+			"english": "scissor",
+			"spanish": "la tijera",
+			"category": "other"
+		},
+		{
 			"english": "clothing",
 			"spanish": "la ropa",
 			"category": "clothing"
@@ -411,6 +416,14 @@
 		{
 			"english": "in",
 			"spanish": "en"
+		},
+		{
+			"english": "with",
+			"spanish": "con"
+		}, 
+		{
+			"english": "this",
+			"spanish": "este"
 		}
 	]
 }

@@ -3,10 +3,8 @@
         <vocabulary-categories [categories]="categories"></vocabulary-categories>
     </card>
     <card class="col-xl-6 col-md-12">
-        <vocabulary-exercises class="exercises"></vocabulary-exercises>
-        <vocabulary-settings class="settings"></vocabulary-settings>
+        <vocabulary-exercises [(selectedExercise)]="selectedExercise" class="col-xl-12 exercises"></vocabulary-exercises>
+        <vocabulary-settings class="col-xl-12 settings" (startExercise)="startExercise($event)"></vocabulary-settings>
     </card>
-    <card class="col-xl-12">
-        *Main exercise view*
-    </card>
+    <vocabulary-main *ngIf="startExercise1" [settings]="settings" [(result)]="message"></vocabulary-main>
 </div>

@@ -22,6 +22,7 @@ import { VocabularyComponent } from './features/vocabulary/pages/vocabulary/voca
 import { VocabularyCategoriesComponent } from './features/vocabulary/components/vocabulary-categories/vocabulary-categories.component';
 import { VocabularyExercisesComponent } from './features/vocabulary/components/vocabulary-exercises/vocabulary-exercises.component';
 import { VocabularySettingsComponent } from './features/vocabulary/components/vocabulary-settings/vocabulary-settings.component';
+import { VocabularyMainComponent } from './features/vocabulary/components/vocabulary-main/vocabulary-main.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { VocabularySettingsComponent } from './features/vocabulary/components/vo
     VocabularyComponent,
     VocabularyCategoriesComponent,
     VocabularyExercisesComponent,
-    VocabularySettingsComponent
+    VocabularySettingsComponent,
+    VocabularyMainComponent
   ],
   imports: [
     HttpClientModule,

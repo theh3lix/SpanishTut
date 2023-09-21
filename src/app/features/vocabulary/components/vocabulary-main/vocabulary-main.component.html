@@ -1,0 +1,41 @@
+<card>
+    <div class="half-view left">
+        <span class="word-to-translate">{{translatedWord}}</span>
+        <table class="table table-sm options">
+            <tbody>
+                <tr class="form-check" *ngFor="let option of options">
+                    <td><input class="form-check-input" type="radio" value="{{option.option}}" [(ngModel)]="selectedOption" name="exerciseChoice" id="exercise1"></td>
+                    <td><label id="{{option}}" class="form-check-label" 
+                        [ngClass]="{'correct': option.correct, 'wrong': option.wrong}">{{option.option | titlecase}}</label></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="result">
+            &nbsp;{{result}}
+        </div>
+            <button class="btn btn-primary btn-sm save-button" (click)="guesss()" style="clear: both;float:right; margin-right: 15px;">Confirm</button>
+    </div>
+    <div class="half-view">
+        <span class="word-to-translate">Wynik: </span>
+        <table class="table table-sm options">
+            <tbody>
+                <tr class="form-check">
+                    <td>Total words: </td>
+                    <td>{{totalWords}}</td>
+                </tr>
+                <tr class="form-check">
+                    <td>Total guesses: </td>
+                    <td>{{guessedWords}}</td>
+                </tr>
+                <tr class="form-check">
+                    <td>Correct guesses: </td>
+                    <td>{{correctGuesses}}</td>
+                </tr>
+                <tr class="form-check">
+                    <td>Wrong guesses: </td>
+                    <td>{{wrongGuesses}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</card>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'vocabulary-settings',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class VocabularySettingsComponent {
   wordsCount: number = 0;
+
+  @Output() startExercise = new EventEmitter<number>();
+
+  start() {
+    this.startExercise.emit(this.wordsCount);
+  }
 }

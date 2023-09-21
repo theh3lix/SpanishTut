@@ -1,24 +1,8 @@
 <table class="table table-sm">
     <tbody>
-        <tr class="form-check">
-            <td><input class="form-check-input" type="radio" value="1" name="exerciseChoice" id="exercise1"
-                    checked></td>
-            <td><label class="form-check-label">Spanish -> English (options)</label></td>
-        </tr>
-        <tr class="form-check">
-            <td><input class="form-check-input" type="radio" value="2" name="exerciseChoice" id="exercise2">
-            </td>
-            <td><label class="form-check-label">Spanish -> English (typing)</label></td>
-        </tr>
-        <tr class="form-check">
-            <td><input class="form-check-input" type="radio" value="3" name="exerciseChoice" id="exercise3">
-            </td>
-            <td><label class="form-check-label">English -> Spanish (options)</label></td>
-        </tr>
-        <tr class="form-check">
-            <td><input class="form-check-input" type="radio" value="4" name="exerciseChoice" id="exercise4">
-            </td>
-            <td><label class="form-check-label">English -> Spanish (typing)</label></td>
+        <tr class="form-check" *ngFor="let exercise of availableExercises">
+            <td><input class="form-check-input" (change)="changeExercise()" [(ngModel)]="selectedExercise" type="radio" value="{{exercise.value}}" name="exerciseChoice" id="exercise1"></td>
+            <td><label class="form-check-label">{{exercise.label}}</label></td>
         </tr>
         <tr class="form-check">
             <td>&nbsp;</td>
