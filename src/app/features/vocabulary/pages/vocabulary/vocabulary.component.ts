@@ -10,7 +10,6 @@ import { Settings } from '../../models/settings.model';
   styleUrls: ['./vocabulary.component.scss']
 })
 export class VocabularyComponent implements OnInit {
-  message: string = '';
   dictionary?: Dictionary;
   startExercise1: boolean = false;
   selectedExercise: string = '1';
@@ -43,6 +42,7 @@ export class VocabularyComponent implements OnInit {
 
 
   startExercise(wordAmount: number) {
+    this.startExercise1 = false;
     this.wordsToGuess = wordAmount;
     const categories = this.categories.filter(x=>x.checked).map(x=>x.category);
     this.settings = {
@@ -53,7 +53,4 @@ export class VocabularyComponent implements OnInit {
     this.startExercise1 = true;
   }
 
-  tmp() {
-    console.log(this.message);
-  }
 }

@@ -50,5 +50,11 @@ td {
 }
 
 .left {
-    border-right: 1px solid rgba(255,255,255,0.3);
+    width: 70%;
+}
+
+.right {
+    display: inline;
+    vertical-align: middle;
+    height: 90%;
 }

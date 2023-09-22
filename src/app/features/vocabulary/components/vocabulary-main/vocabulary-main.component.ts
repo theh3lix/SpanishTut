@@ -4,6 +4,7 @@ import { Dictionary } from 'src/app/features/dictionary/models/dictionary.model'
 import { DataService } from 'src/app/shared/services/data.service';
 import { Prompt } from '../../models/prompt.model';
 import { firstValueFrom } from 'rxjs';
+import { Stats } from '../../models/stats.model';
 
 @Component({
   selector: 'vocabulary-main',
@@ -13,11 +14,7 @@ import { firstValueFrom } from 'rxjs';
 export class VocabularyMainComponent {
 
   dictionary?: Dictionary;
-
-  totalWords: number = 0;
-  guessedWords: number = 0;
-  correctGuesses: number = 0;
-  wrongGuesses: number = 0;
+  stats: Stats = this.defaultStatsModel();
 
   @Input() settings: Settings = {
     wordsAmount: 0,
@@ -25,23 +22,13 @@ export class VocabularyMainComponent {
     categories: []
   }
 
-  translatedWord: string = 'la camisa';
-  options: {option: string, correct: boolean, wrong: boolean}[] = [
-    {option: 'shirt', correct: false, wrong: false},
-    {option: 'pants', correct: false, wrong: false},
-    {option: 'tie', correct: false, wrong: false},
-    {option: 'hat', correct: false, wrong: false},
-  ]
+  translatedWord: string = '';
+  options: { option: string, correct: boolean, wrong: boolean }[] = []
   selectedOption: string = '';
   availableWords: { english: string, spanish: string, category: string }[] = [];
   wordsToGuess: number = 0;
   prompt?: Prompt;
 
-
-  @Output() guess = new EventEmitter<string>();
-
-  @Input() result: string = '';
-  @Output() resultChange = new EventEmitter<string>();
 
   constructor(private dataService: DataService) { }
 
@@ -49,16 +36,26 @@ export class VocabularyMainComponent {
     const data = await firstValueFrom(this.dataService.getJSON('assets/input_files/data.json'));
     this.dictionary = data;
     this.prepareWords();
-    this.totalWords = this.settings.wordsAmount;
-    if(this.totalWords > this.availableWords.length)
-      this.totalWords = this.availableWords.length;
+    this.stats.totalWords = this.settings.wordsAmount;
+    if (this.stats.totalWords > this.availableWords.length)
+      this.stats.totalWords = this.availableWords.length;
     this.setGuessedWord();
     console.log(this.options);
   }
 
+  defaultStatsModel() : Stats {
+    return {
+      totalWords: 0,
+      guessedWords: 0,
+      correctGuesses: 0,
+      wrongGuesses: 0,
+      message: ''
+    }
+  }
+
   setGuessedWord() {
-    if(this.guessedWords >= this.settings.wordsAmount) {
-      this.result = 'Game over';
+    if (this.stats.guessedWords >= this.settings.wordsAmount) {
+      this.stats.message = 'Game over';
       return;
     }
     const word = this.selectWord();
@@ -78,46 +75,34 @@ export class VocabularyMainComponent {
   }
 
   guesss() {
-    if(this.selectedOption == ''){
-      this.result = 'Select option';
+    if (this.selectedOption == '') {
+      this.stats.message = 'Select option';
       return;
     }
-    this.guessedWords++;
+    this.stats.guessedWords++;
     const correct = this.prompt!.english;
-    let option = this.options.filter(x=>x.option==this.selectedOption)[0];
-    if(this.selectedOption == correct) {
-      this.correctGuesses++;
+    let option = this.options.filter(x => x.option == this.selectedOption)[0];
+    if (this.selectedOption == correct) {
+      this.stats.correctGuesses++;
       option.correct = true;
-      this.result = 'Correct!';
+      this.stats.message = 'Correct!';
     } else {
-      this.wrongGuesses++;
+      this.stats.wrongGuesses++;
       option.wrong = true;
-      let correctOption = this.options.filter(x=>x.option == correct)[0];
+      let correctOption = this.options.filter(x => x.option == correct)[0];
       correctOption.correct = true;
-      this.result = 'Incorrect!';
+      this.stats.message = 'Incorrect!';
     }
+    this.availableWords = this.availableWords.filter(x => x.spanish != this.prompt!.spanish);
     setTimeout(() => {
       this.selectedOption = '';
-      this.result = ''; 
+      this.stats.message = '';
       this.setGuessedWord();
     }, 1000);
   }
 
-  sendGuess() {
-    if(this.selectedOption == '') {
-      this.result = 'Select option!'
-      this.resultChange.emit(this.result);
-    } else {
-      this.guess.emit(this.selectedOption);
-    }
-  }
-
-  sendResult() {
-    //send -1 or 1
-  }
-
   private prepareWords() {
-    if(this.settings.categories.filter(x=>x == 'Verbs')) {
+    if (this.settings.categories.filter(x => x == 'Verbs').length > 0) {
       let verbs = this.dictionary?.verbs.map(x => {
         return {
           english: x.english,
@@ -127,7 +112,7 @@ export class VocabularyMainComponent {
       })
       this.availableWords = this.availableWords.concat(verbs!);
     }
-    if(this.settings.categories.filter(x=>x == 'Nouns')) {
+    if (this.settings.categories.filter(x => x == 'Nouns').length > 0) {
       let nouns = this.dictionary?.nouns.map(x => {
         return {
           english: x.english,
@@ -137,7 +122,7 @@ export class VocabularyMainComponent {
       })
       this.availableWords = this.availableWords.concat(nouns!);
     }
-    if(this.settings.categories.filter(x=>x == 'Adjectives')) {
+    if (this.settings.categories.filter(x => x == 'Adjectives').length > 0) {
       let adjectives = this.dictionary?.adjectives.map(x => {
         return {
           english: x.english,
@@ -147,7 +132,7 @@ export class VocabularyMainComponent {
       })
       this.availableWords = this.availableWords.concat(adjectives!);
     }
-    if(this.settings.categories.filter(x=>x == 'Others')) {
+    if (this.settings.categories.filter(x => x == 'Others').length > 0) {
       let others = this.dictionary?.other.map(x => {
         return {
           english: x.english,
@@ -160,20 +145,25 @@ export class VocabularyMainComponent {
   }
 
   selectWord(): Prompt {
-    console.log(this.availableWords);
-    const i = Math.floor(Math.random()*this.availableWords.length)-1;
+    const i = Math.ceil(Math.random() * this.availableWords.length) - 1;
     let badWords: string[] = [];
     const word = this.availableWords[i];
-    const sameCategoryWords = this.availableWords.filter(x=>x.category == word.category);
-    console.log(sameCategoryWords);
-    while(badWords.length < 3) {
-      let otherI = Math.ceil(Math.random()*sameCategoryWords.length)-1;
+    let sameCategoryWords = this.availableWords.filter(x => x.category == word.category);
+    if (sameCategoryWords.length < 4)
+      sameCategoryWords = this.availableWords;
+    if (sameCategoryWords.length == 4) {
+      badWords = badWords.concat(sameCategoryWords.filter(x => x.spanish != word.spanish).map(x => x.english))
+    }
+    while (badWords.length < 3) {
+      let otherI = Math.ceil(Math.random() * sameCategoryWords.length) - 1;
       console.log('Other I: ' + otherI);
       let badWord = sameCategoryWords[otherI];
-      if(badWord.english != word.english && !badWords.includes(badWord.english)) {
+      if (badWord.english != word.english && !badWords.includes(badWord.english)) {
         badWords.push(badWord.english);
       }
     }
+
+
     const finalWord: Prompt = {
       spanish: word.spanish,
       english: word.english,

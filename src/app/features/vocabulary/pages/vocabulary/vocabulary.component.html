@@ -6,5 +6,5 @@
         <vocabulary-exercises [(selectedExercise)]="selectedExercise" class="col-xl-12 exercises"></vocabulary-exercises>
         <vocabulary-settings class="col-xl-12 settings" (startExercise)="startExercise($event)"></vocabulary-settings>
     </card>
-    <vocabulary-main *ngIf="startExercise1" [settings]="settings" [(result)]="message"></vocabulary-main>
+    <vocabulary-main *ngIf="startExercise1" [settings]="settings"></vocabulary-main>
 </div>
