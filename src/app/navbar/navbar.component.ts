@@ -11,7 +11,7 @@ export class NavbarComponent {
     { 
       label: 'Dictionary', 
       route: 'dictionary', 
-      icon: 'list'
+      icon: 'book'
     },
     {
       label: 'Vocabulary', 
@@ -19,14 +19,14 @@ export class NavbarComponent {
       icon: 'language'
     },
     {
-      label: 'More Vocabulary', 
+      label: 'Conjugations', 
       route: '', 
       icon: 'assignment'
     },
     {
       label: 'Even More Vocabulary', 
       route: '', 
-      icon: 'book'
+      icon: 'list'
     },
     {
       label: 'Contact', 

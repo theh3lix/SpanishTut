@@ -1,0 +1,148 @@
+{
+    "verbs": [
+        {
+            "english": "to see",
+            "spanish": "ver",
+            "category": "general",
+            "conjugation": "irregular"
+        },
+        {
+            "english": "to do, to make",
+            "spanish": "haces",
+            "category": "general",
+            "conjugation": "irregular"
+        },
+        {
+            "english": "to leave",
+            "spanish": "salir",
+            "category": "general",
+            "conjugation": "irregular"
+        },
+        {
+            "english": "to put",
+            "spanish": "poner",
+            "category": "general",
+            "conjugation": "irregular"
+        },
+        {
+            "english": "to give",
+            "spanish": "dar",
+            "category": "general",
+            "conjugation": "irregular"
+        },
+        {
+            "english": "to go",
+            "spanish": "ir",
+            "category": "general",
+            "conjugation": "irregular"
+        },
+        {
+            "english": "to wear, to use",
+            "spanish": "usar",
+            "category": "clothing",
+            "conjugation": "ar"
+        },
+        {
+            "english": "to carry, to bring, to wear",
+            "spanish": "llevar",
+            "category": "clothing",
+            "conjugation": "ar"
+        },
+        {
+            "english": "to eat",
+            "spanish": "comer",
+            "category": "general",
+            "conjugation": "er"
+        },
+        {
+            "english": "to read",
+            "spanish": "leer",
+            "category": "general",
+            "conjugation": "er"
+        },
+        {
+            "english": "to think, to believe",
+            "spanish": "creer",
+            "category": "general",
+            "conjugation": "er"
+        },
+        {
+            "english": "to run",
+            "spanish": "correr",
+            "category": "general",
+            "conjugation": "er"
+        },
+        {
+            "english": "to learn",
+            "spanish": "aprender",
+            "category": "general",
+            "conjugation": "er"
+        },
+        {
+            "english": "to live",
+            "spanish": "vivir",
+            "category": "general",
+            "conjugation": "ir"
+        },
+        {
+            "english": "to write",
+            "spanish": "escribir",
+            "category": "general",
+            "conjugation": "ir"
+        },
+        {
+            "english": "to open",
+            "spanish": "abrir",
+            "category": "general",
+            "conjugation": "ir"
+        },
+        {
+            "english": "to receive",
+            "spanish": "recibir",
+            "category": "general",
+            "conjugation": "ir"
+        },
+        {
+            "english": "to attend, to assist",
+            "spanish": "asistir",
+            "category": "general",
+            "conjugation": "ir"
+        },
+        {
+            "english": "to speak",
+            "spanish": "hablar",
+            "category": "general",
+            "conjugation": "ar"
+        },
+        {
+            "english": "to pay",
+            "spanish": "pagar",
+            "category": "general",
+            "conjugation": "ar"
+        },
+        {
+            "english": "to listen",
+            "spanish": "escuchar",
+            "category": "general",
+            "conjugation": "ar"
+        },
+        {
+            "english": "to study",
+            "spanish": "estudiar",
+            "category": "general",
+            "conjugation": "ar"
+        },
+        {
+            "english": "to work",
+            "spanish": "trabajar",
+            "category": "general",
+            "conjugation": "ar"
+        },
+        {
+            "english": "to buy",
+            "spanish": "comprar",
+            "category": "general",
+            "conjugation": "ar"
+        }
+    ]
+}

@@ -1,6 +1,78 @@
 {
 	"verbs": [
 		{
+			"english": "to see",
+			"spanish": "ver",
+			"category": "general",
+			"conjugation": "irregular"
+		},
+		{
+			"english": "to play",
+			"spanish": "jugar",
+			"category": "general",
+			"conjugation": "stemchanging"
+		},
+		{
+			"english": "to begin",
+			"spanish": "empezar",
+			"category": "general",
+			"conjugation": "stemchanging"
+		},
+		{
+			"english": "to say, to tell",
+			"spanish": "decir",
+			"category": "general",
+			"conjugation": "stemchanging"
+		},
+		{
+			"english": "to be able to",
+			"spanish": "poder",
+			"category": "general",
+			"conjugation": "stemchanging"
+		},
+		{
+			"english": "to want",
+			"spanish": "querer",
+			"category": "general",
+			"conjugation": "stemchanging"
+		},
+		{
+			"english": "to prefer",
+			"spanish": "preferir",
+			"category": "general",
+			"conjugation": "stemchanging"
+		},
+		{
+			"english": "to do, to make",
+			"spanish": "haces",
+			"category": "general",
+			"conjugation": "irregular"
+		},
+		{
+			"english": "to leave",
+			"spanish": "salir",
+			"category": "general",
+			"conjugation": "irregular"
+		},
+		{
+			"english": "to put",
+			"spanish": "poner",
+			"category": "general",
+			"conjugation": "irregular"
+		},
+		{
+			"english": "to give",
+			"spanish": "dar",
+			"category": "general",
+			"conjugation": "irregular"
+		},
+		{
+			"english": "to go",
+			"spanish": "ir",
+			"category": "general",
+			"conjugation": "irregular"
+		},
+		{
 			"english": "to wear, to use",
 			"spanish": "usar",
 			"category": "clothing",
@@ -11,12 +83,6 @@
 			"spanish": "llevar",
 			"category": "clothing",
 			"conjugation": "ar"
-		},
-		{
-			"english": "to go",
-			"spanish": "ir",
-			"category": "general",
-			"conjugation": "irregular"
 		},
 		{
 			"english": "to eat",
@@ -390,7 +456,7 @@
 		},
 		{
 			"english": "orange",
-			"spanish": "naranja",
+			"spanish": "anaranjado",
 			"category": "colors"
 		},
 		{
@@ -400,7 +466,32 @@
 		},
 		{
 			"english": "purple",
-			"spanish": "violeto",
+			"spanish": "violeta",
+			"category": "colors"
+		},
+		{
+			"english": "purple",
+			"spanish": "morado",
+			"category": "colors"
+		},
+		{
+			"english": "white",
+			"spanish": "blanco",
+			"category": "colors"
+		},
+		{
+			"english": "grey",
+			"spanish": "gris",
+			"category": "colors"
+		},
+		{
+			"english": "white",
+			"spanish": "blanco",
+			"category": "colors"
+		},
+		{
+			"english": "pink",
+			"spanish": "rosa",
 			"category": "colors"
 		}
 	],
