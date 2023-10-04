@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Spanish Learning';
+  loaded: boolean = false;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loaded = true;
+    }, 300);
+  }
 }
