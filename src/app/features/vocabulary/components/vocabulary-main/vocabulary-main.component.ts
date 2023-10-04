@@ -21,6 +21,7 @@ export class VocabularyMainComponent {
   @Input() settings: Settings = this.defaultModels.defaultSettingsModel();
 
   translatedWord: string = '';
+  correctTranslation: string = '';
   options: { option: string, correct: boolean}[] = []
   availableWords: Word[] = [];
   wordsToGuess: number = 0;
@@ -47,11 +48,13 @@ export class VocabularyMainComponent {
         this.startExercise1();
         break;
       case '2': //spanish -> english (typing)
+      this.startExercise2();
         break;
       case '3': //english -> spanish (options)
         this.startExercise3();
         break;
       case '4': //english -> spanish (typing)
+      this.startExercise4();
         break;
       default:
         break;
@@ -73,8 +76,27 @@ export class VocabularyMainComponent {
     this.setWordForOptionExercise('en');
   }
 
-  guessTypingExercise(selectedOption: string) {
+  startExercise2() {
+    this.setWordForTypingExercise('es');
+  }
+
+  startExercise4() {
+    this.setWordForTypingExercise('en');
+  }
+
+  guessTypingExercise(typedAnswer: string) {
     const eng_to_esp: boolean = this.settings.exerciseType == '4';
+    if (typedAnswer == '') {
+      this.stats.message = 'Answer cannot be empty';
+      return;
+    }
+    this.stats.guessedWords++;
+    this.checkTypedAnswer(typedAnswer);
+    this.availableWords = this.availableWords.filter(x => this.translatedWord != (eng_to_esp ? x.english : x.spanish));
+    setTimeout(() => {
+      this.stats.message = '';
+      this.setExerciseView();
+    }, 1000);
   }
 
   guessOptionExercise(selectedOption: string) {
@@ -118,6 +140,20 @@ export class VocabularyMainComponent {
     return finalWord;
   }
 
+  setWordForTypingExercise(lang: string) {
+    const word = this.helper.selectRandomWord(this.availableWords);
+    switch(lang){
+      case 'es':
+        this.translatedWord = word.spanish;
+        this.correctTranslation = word.english;
+        break;
+      case 'en':
+        this.translatedWord = word.english;
+        this.correctTranslation = word.spanish;
+        break;
+    }
+  }
+
   
   setWordForOptionExercise(lang: string) {
     if(this.gameOverCheck()) return; //stop playing after set amount of words
@@ -143,6 +179,16 @@ export class VocabularyMainComponent {
     } else {
       this.stats.wrongGuesses++;
       this.stats.message = 'Incorrect!';
+    }
+  }
+
+  checkTypedAnswer(typedAnswer: string) {
+    if (typedAnswer == this.correctTranslation) {
+      this.stats.correctGuesses++;
+      this.stats.message = 'Correct!';
+    } else {
+      this.stats.wrongGuesses++;
+      this.stats.message = `Incorrect! (${this.correctTranslation})`;
     }
   }
 }

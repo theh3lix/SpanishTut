@@ -9,5 +9,13 @@ export class VocabularyTypeComponent {
   @Input() translatedWord: string = 'La camisa';
   @Input() message: string = 'Correct!';
 
+
+  answer: string = '';
+
   @Output() guess = new EventEmitter<string>();
+
+  sendGuess() {
+    this.guess.emit(this.answer);
+    this.answer = '';
+  }
 }

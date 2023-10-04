@@ -1,9 +1,9 @@
 <card>
     <div class="form-group">
         <label for="translation" class="word-to-translate">{{translatedWord}}</label>
-        <input type="text" class="form-control" id="translation">
+        <input type="text" class="form-control" id="translation" [(ngModel)]="answer">
         <button class="btn btn-primary btn-sm save-button"
-            style="float:right; margin-right: 15px;">Confirm</button>
+            style="float:right; margin-right: 15px;" (click)="sendGuess()">Confirm</button>
     </div>
     <div class="right">
         <span class=result>{{message}}</span>
