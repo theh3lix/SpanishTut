@@ -141,6 +141,12 @@ export class VocabularyMainComponent {
   }
 
   setWordForTypingExercise(lang: string) {
+    if(this.gameOverCheck()) {
+      this.translatedWord = '';
+      this.correctTranslation = '';
+      this.options = [];
+      return;
+    } //stop playing after set amount of words
     const word = this.helper.selectRandomWord(this.availableWords);
     switch(lang){
       case 'es':
@@ -156,7 +162,12 @@ export class VocabularyMainComponent {
 
   
   setWordForOptionExercise(lang: string) {
-    if(this.gameOverCheck()) return; //stop playing after set amount of words
+    if(this.gameOverCheck()) {
+      this.translatedWord = '';
+      this.correctTranslation = '';
+      this.options = [];
+      return;
+    } //stop playing after set amount of words
     const word = this.selectWord(lang);
     this.prompt = word;
     let options: string[] = this.helper.getOptions(word, lang); //get mixed options

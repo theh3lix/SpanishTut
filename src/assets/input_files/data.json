@@ -19,7 +19,7 @@
 			"conjugation": "stemchanging"
 		},
 		{
-			"english": "to say, to tell",
+			"english": "to say",
 			"spanish": "decir",
 			"category": "general",
 			"conjugation": "stemchanging"
@@ -43,8 +43,8 @@
 			"conjugation": "stemchanging"
 		},
 		{
-			"english": "to do, to make",
-			"spanish": "haces",
+			"english": "to do",
+			"spanish": "hacer",
 			"category": "general",
 			"conjugation": "irregular"
 		},
@@ -73,13 +73,13 @@
 			"conjugation": "irregular"
 		},
 		{
-			"english": "to wear, to use",
+			"english": "to use",
 			"spanish": "usar",
-			"category": "clothing",
+			"category": "general",
 			"conjugation": "ar"
 		},
 		{
-			"english": "to carry, to bring, to wear",
+			"english": "to carry",
 			"spanish": "llevar",
 			"category": "clothing",
 			"conjugation": "ar"
@@ -318,7 +318,7 @@
 			"category": "places"
 		},
 		{
-			"english": "gallery, shopping centre",
+			"english": "gallery",
 			"spanish": "la galeria",
 			"category": "places"
 		},
